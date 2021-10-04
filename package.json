@@ -1,0 +1,25 @@
+
+{
+  "name": "Lurify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lurify-Team/Lurify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lurify-Team/Lurify/issues"
+  },
+  "homepage": "https://github.com/Lurify-Team/Lurify#readme",
+  "devDependencies": {
+    "electron": "^15.1.0"
+  }
+}
