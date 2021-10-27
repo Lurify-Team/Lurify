@@ -6,11 +6,366 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorify</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="file:///Users/ianasanduta/WebstormProjects/Lurify/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
+<div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Lorify</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul id="nav-list">
+        <li>
+            <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search</span>
+        </li>
+        <li>
+            <a href="#dashboard" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'dashboard')">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </button>
+                <span class="tooltip">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="#characters" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'characters')">
+                    <i class='bx bx-user' ></i>
+                    <span class="links_name">Characters</span>
+                </button>
+                <span class="tooltip">Characters</span>
+            </a>
+        </li>
+        <li>
+            <a href="#conversations" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'conversations')">
+                    <i class='bx bx-chat' ></i>
+                    <span class="links_name">Conversations</span>
+                </button>
+                <span class="tooltip">Conversations</span>
+            </a>
+        </li>
+        <li>
+            <a href="#notes" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'notes')">
+                    <i class='bx bx-notepad'></i>
+                    <span class="links_name">Notes</span>
+                </button>
+                <span class="tooltip">Notes</span>
+            </a>
+        </li>
+        <li>
+            <a href="#filemanager" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'filemanager')">
+                    <i class='bx bx-folder' ></i>
+                    <span class="links_name">File Manager</span>
+                </button>
+                <span class="tooltip">Files</span>
+            </a>
+        </li>
+        <li>
+            <a href="#maps" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'maps')">
+                    <i class='bx bx-map-alt'></i>
+                    <span class="links_name">Maps</span>
+                </button>
+                <span class="tooltip">Maps</span>
+            </a>
+        </li>
+        <li>
+            <a href="#saved" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'saved')">
+                    <i class='bx bx-heart' ></i>
+                    <span class="links_name">Saved</span>
+                </button>
+                <span class="tooltip">Saved</span>
+            </a>
+        </li>
+        <li>
+            <a href="#settings" data-toggle="tab">
+                <button class="tablinks" onclick="openCity(event, 'settings')">
+                    <i class='bx bx-cog' ></i>
+                    <span class="links_name">Setting</span>
+                </button>
+                <span class="tooltip">Setting</span>
+            </a>
+        </li>
+        <li class="profile">
+            <div class="profile-details">
+                <img src="profile.jpg" alt="profileImg">
+                <div class="name_job">
+                    <div class="name">Prem Shahi</div>
+                    <div class="job">Web designer</div>
+                </div>
+            </div>
+            <i class='bx bx-log-out' id="log_out" ></i>
+        </li>
+    </ul>
+</div>
+<div id="home-section">
+    <div id="dashboard" class="tabcontent">
+        <h2> Tab 1</h2>
+        <div class="card">
+            <img src="img_avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+    </div>
+    <div id="characters" class="tabcontent" >
+        <h2> Tab 2</h2>
 
-<!-- Navbar Section -->
+        <p1>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi ldkjpojwpeok  vdiwjfiej ljiedwiejp eifjie  ewf iewhfiheiof hpwiehfp e fipehwpi fp
+
+        </p1>
+    </div>
+    <div id="conversations" class="tabcontent" >
+        <h2> Tab 3</h2>
+
+        <p1>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+        </p1>
+    </div>
+    <div id="notes" class="tabcontent" >
+        <h2> Tab 4</h2>
+
+        <p1>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+        </p1>
+    </div>
+    <div id="filemanager" class="tabcontent" >
+        <h2> Tab 5</h2>
+        <p1>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+        </p1>
+    </div>
+    <div id="maps" class="tabcontent" >
+        <h2> Tab 6</h2>
+
+        <p1>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+        </p1>
+    </div>
+    <div id="saved" class="tabcontent" >
+        <h2> Tab 6</h2>
+
+        <p1>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+        </p1>
+    </div>
+    <div id="settings" class="tabcontent" >
+        <h2> Tab 6</h2>
+
+        <p1>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+        </p1>
+    </div>
+</div>
+<script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+
+    closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+    });
+
+    searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+    });
+
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+        if(sidebar.classList.contains("open")){
+            closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+        }else {
+            closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+        }
+    }
+
+
+    $(document).ready(function(){
+        //  When user clicks on tab, this code will be executed
+        $("#nav-list li").click(function() {
+            //  First remove class "active" from currently active tab
+            $("#nav-list li").removeClass('active');
+
+            //  Now add class "active" to the selected/clicked tab
+            $(this).addClass("active");
+
+            //  Hide all tab content
+            $(".tabcontent").hide();
+
+            //  Here we get the href value of the selected tab
+            var selected_tab = $(this).find("a").attr("href");
+
+            //  Show the selected tab content
+            $(selected_tab).fadeIn();
+
+            //  At the end, we add return false so that the click on the link is not executed
+            return false;
+        });
+    });
+
+    <!--
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+
+
+        $('.nav-list').on('click', function() {
+            $('#tabs').find('a[href='+$(this).prop("href")+']').click();
+        });
+        -->
+</script>
+
+</body>
+</html>
+<!--s
+
+<script type="text/javascript" src="file:///Users/ianasanduta/WebstormProjects/Lurify/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<aside>
+    <section>
+        <div class="tab">
+                <button class="tabs__button" onclick="openCity(event, 'Categories')" >
+                    Categories
+                </button>
+                <button class="tabs__button" onclick="openCity(event, 'Places')">
+                    Places
+                </button>
+                <button  class="tabs__button" onclick="openCity(event, 'Stories')">
+                    Stories
+                </button>
+                <button  class="tabs__button" onclick="openCity(event, 'Notes')">
+                    Notes
+                </button>
+                <button  class="tabs__button" onclick="openCity(event, 'Relations')">
+                    Relations
+                </button>
+                <button  class="tabs__button" onclick="openCity(event, 'Miscellaneous')">
+                    Miscellaneous
+                </button>
+        </div>
+
+        <div id="Categories" class="tabs__content ">
+            <h2> Tab 1</h2>
+            <p1>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi ldkjpojwpeok  vdiwjfiej ljiedwiejp eifjie  ewf iewhfiheiof hpwiehfp e fipehwpi fp
+
+            </p1>
+            <textarea>
+
+            </textarea>
+        </div>
+
+        <div id="Places" class="tabs__content" >
+            <h2> Tab 2</h2>
+
+            <p1>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi ldkjpojwpeok  vdiwjfiej ljiedwiejp eifjie  ewf iewhfiheiof hpwiehfp e fipehwpi fp
+
+            </p1>
+        </div>
+
+        <div id="Stories" class="tabs__content" >
+            <h2> Tab 3</h2>
+
+            <p1>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+            </p1>
+        </div>
+
+        <div id="Notes" class="tabs__content" >
+            <h2> Tab 4</h2>
+
+            <p1>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+            </p1>
+            <input type="text" id="lname" name="lname"><br><br>
+        </div>
+
+        <div id="Relations" class="tabs__content" >
+            <h2> Tab 5</h2>
+
+            <p1>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+            </p1>
+        </div>
+
+        <div id="Miscellaneous" class="tabs__content" >
+            <h2> Tab 6</h2>
+
+            <p1>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
+
+            </p1>
+        </div>
+
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabs__content");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tabs__button");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+
+  </section>
+</aside>
+
+Navbar Section
 
 <nav class="navbar">
     <div class="navbar__container">
@@ -36,6 +391,4 @@
         </ul>
     </div>
 </nav>
-
-</body>
-</html>
+-->

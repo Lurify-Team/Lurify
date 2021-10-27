@@ -1,4 +1,3 @@
-
 {
   "name": "Lurify",
   "version": "1.0.0",
@@ -6,7 +5,6 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +19,9 @@
   "homepage": "https://github.com/Lurify-Team/Lurify#readme",
   "devDependencies": {
     "electron": "^15.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.6.1"
   }
 }
