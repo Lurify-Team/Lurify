@@ -36,4 +36,4 @@ function exist(key) {
     return settings.hasSync(key);
 }
 
-export { save, load, exist };
+module.exports = { save, load, exist };
