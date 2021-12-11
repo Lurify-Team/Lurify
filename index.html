@@ -223,15 +223,27 @@
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
 
-        </p1>
-    </div>
-    <div id="settings" class="tabcontent" >
-        <h2> Tab 6</h2>
-
-        <p1>
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius tristique erat, vitae maximus Proin varius tristique erat, vitae maximus metus ultricies ut. Nam at auctor lectus, a sagi
-
+            </p1>
+        </div>
+        <div id="settings" class="tabcontent">
+            <h2> Settings</h2>
+            <div class="row">
+                <div class="col">Electron-settings setting/getting</div>
+            </div>
+            <div class="row">
+                <div class="col-3">Field name</div>
+                <div class="col-9"><input type="text" id="settings-name"></div>
+            </div>
+            <div class="row">
+                <div class="col-3">Value</div>
+                <div class="col-9"><input type="text" id="settings-value"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button id="settings-set">Set</button>
+                    <button id="settings-get">Get</button>
+                </div>
+            </div>
         </p1>
     </div>
 </div>
@@ -259,7 +271,22 @@
             closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
         }
     }
-
+    
+    let renderer = require('electron').ipcRenderer;
+    document.getElementById('settings-set').onclick = function () {
+        var name = document.getElementById('settings-name').value;
+        var value = document.getElementById('settings-value').value;
+        renderer.send('settings-set', {name: name, value: value});
+    };
+    document.getElementById('settings-get').onclick = function () {
+        var name = document.getElementById('settings-name').value;
+        renderer.send('settings-get', {name: name});
+        
+    };
+    renderer.on('settings-get-reply', function (event, arg) {
+        var value = arg.value;
+        document.getElementById('settings-value').value = value;
+    });
 
     $(document).ready(function(){
         //  When user clicks on tab, this code will be executed

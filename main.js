@@ -1,8 +1,9 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
+const storage = require('./storage')
 
 function createWindow () {
     // Create the browser window.
@@ -10,7 +11,9 @@ function createWindow () {
         width: 1000,
         height: 800,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'preload.js'),
+            nodeIntegration: true,
+            contextIsolation: false
         }
     })
 
@@ -44,6 +47,14 @@ app.on('window-all-closed', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-
-
+ipcMain.on('settings-set', function(event, arg) {
+    storage.save(arg.name, arg.value);
+});
+ipcMain.on('settings-get', function (event, arg) {
+    let value = storage.load(arg.name);
+    event.sender.send('settings-get-reply', {
+        name: arg.name,
+        value: value
+    });
+});
 
